@@ -58,7 +58,6 @@ const MainContainer = styled.div`
   height: 93.75vw;
   display: flex;
   gap: 4.2vw;
-  padding-top: 1vw;
   animation: fadeIn 5s;
   @keyframes fadeIn {
     0% {
