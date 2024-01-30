@@ -1,0 +1,19 @@
+.container {
+    width: 59.17vw;
+    height: 59.17vw;
+    border-top-right-radius: 20vw;
+    padding: 4vw;
+}
+
+.container h1 {
+    font-size: 1.5vw;
+    text-align: center;
+    margin-bottom: 2vw;
+    font-weight: 700;
+}
+
+.container p {
+    font-size: 1.2vw;
+    line-height: 1.5vw;
+    text-align: center;
+}

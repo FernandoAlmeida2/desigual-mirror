@@ -1,0 +1,42 @@
+.container {
+  width: 23.3vw;
+  height: 86.7vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4.2vw;
+}
+
+.logo {
+   height: 22.3vw;
+}
+
+.navbar {
+  display: flex;
+  width: 21.3vw;
+  height: 59.17vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  color: #fff;
+  background-image: url(/images/desig-1.jpg);
+  Background-size: cover;
+  Background-repeat: no-repeat;
+}
+
+.navItem {
+    width: 20vw;
+    height: 4vw;
+    font-size: 2.2vw;
+    font-weight: 700;
+    /* background-color: #427ef7;
+    border-radius: 1vw; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navItem:hover {
+  cursor: pointer;
+}
