@@ -3,8 +3,8 @@ import { styled } from "styled-components";
 const PreLoaderGif = styled.div`
   height: 100vh;
   width: 100vw;
-  background-image: url(/images/desigual-lab-tipografia.gif);
-  background-size: cover;
+  background-image: url(/images/desigual-lab-tipografia-faster.gif);
+  background-size: contain;
   background-repeat: no-repeat;
 `;
 
@@ -14,10 +14,13 @@ const MainContainer = styled.div<{
   width: 100vw;
   height: 93.75vw;
   display: flex;
-  gap: 4.2vw;
+  gap: 3.28vw;
+  padding: 2.34375vw;
   animation: fadeIn 5s;
   background-image: ${(props) =>
-    props.currentTopic !== 0 ? "url(/images/desig-3.jpg)" : "url(/images/desig-3.jpg)"};
+    props.currentTopic === 0
+      ? "url(/images/cover-top-1.png)"
+      : "url(/images/cover-top-2.png)"};
   @keyframes fadeIn {
     0% {
       opacity: 0;
@@ -26,73 +29,95 @@ const MainContainer = styled.div<{
       opacity: 1;
     }
   }
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+`;
+
+const LogoPMF = styled.img`
+  position: fixed;
+  right: 2.73vw;
+  top: 2.73vw;
+  width: 9.37vw;
+  opacity: 0.5;
 `;
 
 const ContentContainer = styled.div<{
   currentTopic: number;
 }>`
-  width: 72.5vw;
+  width: 71.5vw;
   display: flex;
   flex-direction: column;
-  gap: 4.2vw;
-  animation: ${(props) =>
-    props.currentTopic !== 0 ? "fadeIn 2s" : "none"};
-  
+  gap: 3.28vw;
+  animation: ${(props) => (props.currentTopic !== 0 ? "fadeIn 2s" : "none")};
 `;
 
 const ContentTop = styled.div<{
   currentTopic: number;
 }>`
-  width: 59.17vw;
-  height: 59.17vw;
-  border-top-right-radius: 20vw;
-  background-image: ${(props) =>
-    props.currentTopic === 0 ? "url(/images/desig-3.jpg)" : "none"};
-  background-color: ${(props) => (props.currentTopic === 0 ? "none" : "rgb(255, 255, 255, 0.3)")};
+  width: 52.34vw;
+  height: 52.34vw;
+  border-top-right-radius: 18vw;
+  background-color: ${(props) =>
+    props.currentTopic === 0 ? "none" : "rgb(255, 255, 255, 0.2)"};
   background-size: cover;
   background-repeat: no-repeat;
+  border: 0.4vw solid #fff;
+`;
+
+const TitleText = styled.div`
+  font-size: 5.5vw;
+  line-height: 5vw;
+  color: #fff;
+  margin: 25vw 0 0 2.19vw;
 `;
 
 const ContainerBottom = styled.div`
-  height: 30.38vw;
+  height: 27.34vw;
   display: flex;
   align-items: flex-end;
 `;
 
 const ContentBottomBox = styled.div`
-  height: 30.38vw;
+  height: 27.34vw;
 `;
 
 const ContentBottom = styled.div<{
   currentTopic: number;
 }>`
-  width: 59.17vw;
-  height: 23.3vw;
-  border-bottom-right-radius: 20vw;
-  background-color: ${(props) => (props.currentTopic === 0 ? "#427ef7" : "#fff")};
-  opacity: 0.3;
+  width: 52.34vw;
+  height: 21.4vw;
+  border-bottom-right-radius: 18vw;
+  background-image: ${(props) =>
+    props.currentTopic === 0
+      ? "url(/images/cover-bottom-1.png)"
+      : "url(/images/cover-bottom-2.png)"};
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 0.4vw solid #fff;
 `;
 
 const ContentPoint = styled.div<{
   currentTopic: number;
 }>`
-  width: 13.33vw;
-  height: 13.33vw;
+  width: 13.125vw;
+  height: 13.125vw;
+  border: 0.4vw solid #fff;
   border-radius: 13.33vw;
-  background-color: ${(props) => (props.currentTopic === 0 ? "#427ef7" : "#fff")};
-  opacity: 0.3;
 `;
 
 export const Styles = {
   PreLoaderGif,
   MainContainer,
+  TitleText,
+  LogoPMF,
   ContainerBottom,
   ContentBottomBox,
   ContentBottom,
   ContentContainer,
   ContentTop,
-  ContentPoint
-}
+  ContentPoint,
+};
 
 /* Enable hover only on non-touch devices */
 /* @media (hover: hover) and (pointer: fine) {

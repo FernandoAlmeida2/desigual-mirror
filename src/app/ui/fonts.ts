@@ -1,6 +1,6 @@
-import { Roboto } from 'next/font/google';
+import { Fira_Sans } from 'next/font/google';
  
-export const roboto = Roboto({
-    weight: ['300', '400', '700'], 
+export const roboto = Fira_Sans({
+    weight: ['300', '400', '500', '700'], 
     subsets: ['latin'] 
 });

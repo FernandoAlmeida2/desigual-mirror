@@ -14,7 +14,7 @@ export default function Home() {
   }
 
   useEffect(() => {
-    setTimeout(() => setPreLoading(false), 4000);
+    setTimeout(() => setPreLoading(false), 3900);
   }, []);
 
   if (preLoading)
@@ -25,10 +25,15 @@ export default function Home() {
 
   return (
     <Styles.MainContainer currentTopic={currentTopic}>
-      <NavBar changeTopic={changeTopic} />
+      <Styles.LogoPMF src="/images/Logo_PMF_Ver_Mono_Branco.svg" alt="logo pmf" />
+      <NavBar changeTopic={changeTopic} currentTopic={currentTopic} />
       <Styles.ContentContainer currentTopic={currentTopic}>
         <Styles.ContentTop currentTopic={currentTopic}>
-          {currentTopic === 1 && <Topic1 />}
+          {currentTopic === 1 ? <Topic1 /> : (
+            <Styles.TitleText>
+              Por uma<br />Fortaleza<br />mais igual.
+            </Styles.TitleText>
+          )}
         </Styles.ContentTop>
 
         <Styles.ContainerBottom>

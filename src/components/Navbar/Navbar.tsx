@@ -1,27 +1,41 @@
+"use client";
+
+import { useState } from "react";
 //import Link from "next/link";
 
 import { Styles } from "./Navbar.styles";
 
 type Props = {
+  currentTopic: number;
   changeTopic: Function;
 };
 
-export default function NavBar({ changeTopic }: Props) {
+export default function NavBar({ currentTopic, changeTopic }: Props) {
   return (
-    <Styles.Container>
-      <Styles.Logo
-        src="/images/desigualLab-vert-col-pos.svg"
-        alt="logo desigual lab"
-      />
-
-      <Styles.Navbar>
-        <Styles.NavItem onClick={() => changeTopic(1)}>
-          Tópico 1
-        </Styles.NavItem>
-        <Styles.NavItem>Tópico 2</Styles.NavItem>
-        <Styles.NavItem>Tópico 3</Styles.NavItem>
-        <Styles.NavItem>Tópico 4</Styles.NavItem>
-      </Styles.Navbar>
-    </Styles.Container>
+    <>
+      {
+        <Styles.Container>
+          <Styles.Logo
+            src="/images/desigualLab-vert-white.svg"
+            alt="logo desigual lab"
+          />
+          {currentTopic === 0 ? (
+            <Styles.MenuIcon onClick={() => changeTopic(1)} />
+          ) : (
+            <Styles.Navbar>
+              <Styles.NavItem>Quem somos</Styles.NavItem>
+              <Styles.NavItem>O que fazemos</Styles.NavItem>
+              <Styles.NavTitle>Como fazemos</Styles.NavTitle>
+              <Styles.NavItem>O que alcançamos</Styles.NavItem>
+              <Styles.NavItem>Nossas parcerias</Styles.NavItem>
+              <Styles.NavItem>Resultados</Styles.NavItem>
+              <Styles.NavItem>Projeções</Styles.NavItem>
+              <Styles.NavItem>Contato</Styles.NavItem>
+              <Styles.NavItem onClick={() => changeTopic(0)}>Início</Styles.NavItem>
+            </Styles.Navbar>
+          )}
+        </Styles.Container>
+      }
+    </>
   );
 }

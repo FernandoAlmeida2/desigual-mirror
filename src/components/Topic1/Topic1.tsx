@@ -1,8 +1,8 @@
-import styles from "./topic1.module.css";
+import { Styles } from "./Topic1.styles";
 
 export default function Topic1() {
   return (
-    <div className={styles.container}>
+    <Styles.Container>
       <h1>Lorem Ipsum</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie
@@ -38,6 +38,6 @@ export default function Topic1() {
         libero ac eros efficitur dapibus non vitae tellus. Curabitur congue
         tortor ornare commodo egestas. Aliquam erat volutpat.
       </p>
-    </div>
+    </Styles.Container>
   );
 }
