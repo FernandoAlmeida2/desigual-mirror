@@ -15,7 +15,9 @@ export default function Home() {
   }
 
   useEffect(() => {
-    setTimeout(() => setPreLoading(false), 3900);
+    setTimeout(() => {
+      setPreLoading(false)
+    }, 3900);
   }, []);
 
   if (preLoading) return <Styles.PreLoaderGif></Styles.PreLoaderGif>;

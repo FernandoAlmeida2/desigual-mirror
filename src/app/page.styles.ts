@@ -16,25 +16,30 @@ const MainContainer = styled.div<{
   display: flex;
   gap: 3.28vw;
   padding: 2.34375vw;
-  animation: fadeIn 5s;
+  animation: ${(props) =>
+    props.currentTopic === 0 ? "fadeIn 2s" : "mymove 2s"};
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+
   background-image: ${(props) =>
     props.currentTopic === 0
       ? "url(/images/cover-top-1.png)"
       : "url(/images/cover-top-2.png)"};
+
   @keyframes fadeIn {
     0% {
-      opacity: 0;
+      opacity: 0.1;
     }
     100% {
       opacity: 1;
     }
   }
-  @keyframes fadeOut {
+  @keyframes mymove {
     0% {
-      opacity: 1;
+      background-image: url(/images/cover-top-1.png);
     }
     100% {
-      opacity: 0;
+      background-image: url(/images/cover-top-2.png);
     }
   }
   background-size: cover;
@@ -57,7 +62,6 @@ const ContentContainer = styled.div<{
   display: flex;
   flex-direction: column;
   gap: 3.28vw;
-  animation: fadeIn 2s;
 `;
 
 const ContentTop = styled.div<{
@@ -70,7 +74,8 @@ const ContentTop = styled.div<{
     props.currentTopic === 0 ? "none" : "rgb(229, 196, 0, 0.7)"};
   background-size: cover;
   background-repeat: no-repeat;
-  border: ${(props) => props.currentTopic === 0 ? "0.4vw solid #fff" : "none"};
+  border: ${(props) =>
+    props.currentTopic === 0 ? "0.4vw solid #fff" : "none"};
 `;
 
 const TitleText = styled.div`
@@ -102,7 +107,20 @@ const ContentBottom = styled.div<{
       : "url(/images/cover-bottom-2.png)"};
   background-size: cover;
   background-repeat: no-repeat;
-  border: ${(props) => props.currentTopic === 0 ? "0.4vw solid #fff" : "none"};
+  border: ${(props) =>
+    props.currentTopic === 0 ? "0.4vw solid #fff" : "none"};
+  animation: ${(props) =>
+    props.currentTopic === 0 ? "none" : "mymove-2 2s"};
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  @keyframes mymove-2 {
+    0% {
+      background-image: url(/images/cover-bottom-1.png);
+    }
+    100% {
+      background-image: url(/images/cover-bottom-2.png);
+    }
+  }
 `;
 
 const ContentPoint = styled.div<{
@@ -112,7 +130,8 @@ const ContentPoint = styled.div<{
   height: 13.125vw;
   background-color: ${(props) =>
     props.currentTopic === 0 ? "none" : "rgb(229, 196, 0, 0.9)"};
-  border: ${(props) => props.currentTopic === 0 ? "0.4vw solid #fff" : "none"};
+  border: ${(props) =>
+    props.currentTopic === 0 ? "0.4vw solid #fff" : "none"};
   border-radius: 13.33vw;
 `;
 

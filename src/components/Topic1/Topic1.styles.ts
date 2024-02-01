@@ -6,6 +6,9 @@ const Container = styled.div`
   padding: 8.17vw 1vw 4vw 8.76vw;
   text-align: justify;
   color: #261B0B;
+  animation: fadeIn 2s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
   overflow-y: auto;
 
   /* width */

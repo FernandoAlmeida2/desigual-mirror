@@ -20,7 +20,7 @@ const MenuIcon = styled(VscMenu)`
   &:hover {
     cursor: pointer;
     scale: 120%;
-  } 
+  }
 `;
 
 const Navbar = styled.div`
@@ -28,6 +28,9 @@ const Navbar = styled.div`
   height: 59.17vw;
   flex-direction: column;
   align-items: center;
+  animation: fadeIn 2s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
 `;
 
 const NavItem = styled.div`
@@ -35,12 +38,11 @@ const NavItem = styled.div`
   height: 4vw;
   font-size: 1.1vw;
   font-weight: 300;
+  padding-left: 1vw;
   color: #000;
-  background-color: #E6C803;
-  border-bottom: 0.2vw solid #fcdf23;
-  opacity: 0.5;
+  background-color: rgb(229, 196, 0, 0.7);
+  border-bottom: 0.2vw solid #d3b404;
   display: flex;
-  justify-content: center;
   align-items: center;
 
   &:hover {
@@ -52,12 +54,11 @@ const NavItem = styled.div`
 
 const NavTitle = styled.div`
   width: 20vw;
-  font-size: 1.3vw;
-  color: #d1b502;
+  font-size: 1.2vw;
+  color: #F2D201;
   padding: 1.5vw 0 1vw 0;
+  font-weight: 300;
 `;
-
-
 
 export const Styles = {
   Container,
@@ -65,5 +66,5 @@ export const Styles = {
   MenuIcon,
   Navbar,
   NavItem,
-  NavTitle
+  NavTitle,
 };
