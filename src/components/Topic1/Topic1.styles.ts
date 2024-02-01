@@ -5,6 +5,7 @@ const Container = styled.div`
   height: 52.34vw;
   padding: 4vw 0 4vw 4vw;
   overflow-y: auto;
+  text-align: justify;
 
   h1 {
     font-size: 1.5vw;

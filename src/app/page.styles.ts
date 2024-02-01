@@ -59,10 +59,10 @@ const ContentTop = styled.div<{
   height: 52.34vw;
   border-top-right-radius: 18vw;
   background-color: ${(props) =>
-    props.currentTopic === 0 ? "none" : "rgb(255, 255, 255, 0.2)"};
+    props.currentTopic === 0 ? "none" : "rgb(229, 196, 0, 0.7)"};
   background-size: cover;
   background-repeat: no-repeat;
-  border: 0.4vw solid #fff;
+  border: ${(props) => props.currentTopic === 0 ? "border: 0.4vw solid #fff" : "none"};
 `;
 
 const TitleText = styled.div`
@@ -94,7 +94,7 @@ const ContentBottom = styled.div<{
       : "url(/images/cover-bottom-2.png)"};
   background-size: cover;
   background-repeat: no-repeat;
-  border: 0.4vw solid #fff;
+  border: ${(props) => props.currentTopic === 0 ? "border: 0.4vw solid #fff" : "none"};
 `;
 
 const ContentPoint = styled.div<{
@@ -102,7 +102,9 @@ const ContentPoint = styled.div<{
 }>`
   width: 13.125vw;
   height: 13.125vw;
-  border: 0.4vw solid #fff;
+  background-color: ${(props) =>
+    props.currentTopic === 0 ? "none" : "rgb(229, 196, 0, 0.9)"};
+  border: ${(props) => props.currentTopic === 0 ? "border: 0.4vw solid #fff" : "none"};
   border-radius: 13.33vw;
 `;
 
