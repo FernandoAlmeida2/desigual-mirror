@@ -9,7 +9,7 @@ const PreLoaderGif = styled.div`
 `;
 
 const MainContainer = styled.div<{
-  currentTopic: number;
+  currentTopic: string;
 }>`
   width: 100vw;
   height: 93.75vw;
@@ -17,12 +17,12 @@ const MainContainer = styled.div<{
   gap: 3.28vw;
   padding: 2.34375vw;
   animation: ${(props) =>
-    props.currentTopic === 0 ? "fadeIn 2s" : "mymove 2s"};
+    props.currentTopic === "none" ? "fadeIn 1s" : "mymove 1s"};
   animation-timing-function: ease-in-out;
   -webkit-animation-timing-function: ease-in-out;
 
   background-image: ${(props) =>
-    props.currentTopic === 0
+    props.currentTopic === "none"
       ? "url(/images/cover-top-1.png)"
       : "url(/images/cover-top-2.png)"};
 
@@ -55,34 +55,11 @@ const LogoPMF = styled.img`
   opacity: 0.5;
 `;
 
-const ContentContainer = styled.div<{
-  currentTopic: number;
-}>`
+const ContentContainer = styled.div`
   width: 71.5vw;
   display: flex;
   flex-direction: column;
   gap: 3.28vw;
-`;
-
-const ContentTop = styled.div<{
-  currentTopic: number;
-}>`
-  width: 52.34vw;
-  height: 52.34vw;
-  border-top-right-radius: 18vw;
-  background-color: ${(props) =>
-    props.currentTopic === 0 ? "none" : "rgb(229, 196, 0, 0.7)"};
-  background-size: cover;
-  background-repeat: no-repeat;
-  border: ${(props) =>
-    props.currentTopic === 0 ? "0.4vw solid #fff" : "none"};
-`;
-
-const TitleText = styled.div`
-  font-size: 5.5vw;
-  line-height: 5vw;
-  color: #fff;
-  margin: 25vw 0 0 2.19vw;
 `;
 
 const ContainerBottom = styled.div`
@@ -96,21 +73,21 @@ const ContentBottomBox = styled.div`
 `;
 
 const ContentBottom = styled.div<{
-  currentTopic: number;
+  currentTopic: string;
 }>`
   width: 52.34vw;
   height: 21.4vw;
   border-bottom-right-radius: 18vw;
   background-image: ${(props) =>
-    props.currentTopic === 0
+    props.currentTopic === "none"
       ? "url(/images/cover-bottom-1.png)"
       : "url(/images/cover-bottom-2.png)"};
   background-size: cover;
   background-repeat: no-repeat;
   border: ${(props) =>
-    props.currentTopic === 0 ? "0.4vw solid #fff" : "none"};
+    props.currentTopic === "none" ? "0.4vw solid #fff" : "none"};
   animation: ${(props) =>
-    props.currentTopic === 0 ? "none" : "mymove-2 2s"};
+    props.currentTopic === "none" ? "none" : "mymove-2 1s"};
   animation-timing-function: ease-in-out;
   -webkit-animation-timing-function: ease-in-out;
   @keyframes mymove-2 {
@@ -124,27 +101,25 @@ const ContentBottom = styled.div<{
 `;
 
 const ContentPoint = styled.div<{
-  currentTopic: number;
+  currentTopic: string;
 }>`
   width: 13.125vw;
   height: 13.125vw;
   background-color: ${(props) =>
-    props.currentTopic === 0 ? "none" : "rgb(229, 196, 0, 0.9)"};
+    props.currentTopic === "none" ? "none" : "rgb(229, 196, 0, 0.9)"};
   border: ${(props) =>
-    props.currentTopic === 0 ? "0.4vw solid #fff" : "none"};
+    props.currentTopic === "none" ? "0.4vw solid #fff" : "none"};
   border-radius: 13.33vw;
 `;
 
 export const Styles = {
   PreLoaderGif,
   MainContainer,
-  TitleText,
   LogoPMF,
   ContainerBottom,
   ContentBottomBox,
   ContentBottom,
   ContentContainer,
-  ContentTop,
   ContentPoint,
 };
 

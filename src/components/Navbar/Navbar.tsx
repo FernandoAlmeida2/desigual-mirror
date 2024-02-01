@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Styles } from "./Navbar.styles";
 
 type Props = {
-  currentTopic: number;
+  currentTopic: string;
   changeTopic: Function;
 };
 
@@ -19,8 +19,8 @@ export default function NavBar({ currentTopic, changeTopic }: Props) {
             src="/images/logos/desigualLab-vert-white.svg"
             alt="logo desigual lab"
           />
-          {currentTopic === 0 ? (
-            <Styles.MenuIcon onClick={() => changeTopic(1)} />
+          {currentTopic === "none" ? (
+            <Styles.MenuIcon onClick={() => changeTopic("Quem-somos")} />
           ) : (
             <Styles.Navbar>
               <Styles.NavItem>Quem somos</Styles.NavItem>
@@ -30,8 +30,8 @@ export default function NavBar({ currentTopic, changeTopic }: Props) {
               <Styles.NavItem>Nossas parcerias</Styles.NavItem>
               <Styles.NavItem>Resultados</Styles.NavItem>
               <Styles.NavItem>Projeções</Styles.NavItem>
-              <Styles.NavItem>Contato</Styles.NavItem>
-              <Styles.NavItem onClick={() => changeTopic(0)}>Início</Styles.NavItem>
+              <Styles.NavItem onClick={() => changeTopic("Contato")}>Contato</Styles.NavItem>
+              <Styles.NavItem onClick={() => changeTopic("none")}>Início</Styles.NavItem>
             </Styles.Navbar>
           )}
         </Styles.Container>

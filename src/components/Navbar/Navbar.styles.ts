@@ -28,7 +28,7 @@ const Navbar = styled.div`
   height: 59.17vw;
   flex-direction: column;
   align-items: center;
-  animation: fadeIn 2s;
+  animation: fadeIn 1s;
   animation-timing-function: ease-in-out;
   -webkit-animation-timing-function: ease-in-out;
 `;

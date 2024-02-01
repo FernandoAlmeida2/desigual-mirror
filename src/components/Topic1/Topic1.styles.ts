@@ -5,10 +5,7 @@ const Container = styled.div`
   height: 52.34vw;
   padding: 8.17vw 1vw 4vw 8.76vw;
   text-align: justify;
-  color: #261B0B;
-  animation: fadeIn 2s;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-timing-function: ease-in-out;
+  color: #261b0b;
   overflow-y: auto;
 
   /* width */
@@ -18,13 +15,13 @@ const Container = styled.div`
 
   /* Track */
   &::-webkit-scrollbar-track {
-    background: rgb(229, 196, 0, 0.7);
+    background: rgb(229, 196, 0, 0.2);
     border-radius: 1vw;
   }
 
   /* Handle */
   &::-webkit-scrollbar-thumb {
-    background: rgb(229, 196, 0, 0.7);
+    background: rgb(229, 196, 0, 0.2);
     width: 2vw;
   }
 
@@ -44,9 +41,9 @@ const Container = styled.div`
   }
 
   p {
-      font-size: 1vw;
-      line-height: 1.3vw;
-    }
+    font-size: 1vw;
+    line-height: 1.3vw;
+  }
 `;
 
 export const Styles = {
