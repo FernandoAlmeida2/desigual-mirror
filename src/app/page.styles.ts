@@ -4,7 +4,7 @@ const PreLoaderGif = styled.div`
   height: 100vh;
   width: 100vw;
   background-image: url(/images/desigual-lab-tipografia-faster.gif);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 `;
 
@@ -29,6 +29,14 @@ const MainContainer = styled.div<{
       opacity: 1;
     }
   }
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -49,7 +57,7 @@ const ContentContainer = styled.div<{
   display: flex;
   flex-direction: column;
   gap: 3.28vw;
-  animation: ${(props) => (props.currentTopic !== 0 ? "fadeIn 2s" : "none")};
+  animation: fadeIn 2s;
 `;
 
 const ContentTop = styled.div<{
@@ -62,7 +70,7 @@ const ContentTop = styled.div<{
     props.currentTopic === 0 ? "none" : "rgb(229, 196, 0, 0.7)"};
   background-size: cover;
   background-repeat: no-repeat;
-  border: ${(props) => props.currentTopic === 0 ? "border: 0.4vw solid #fff" : "none"};
+  border: ${(props) => props.currentTopic === 0 ? "0.4vw solid #fff" : "none"};
 `;
 
 const TitleText = styled.div`
@@ -94,7 +102,7 @@ const ContentBottom = styled.div<{
       : "url(/images/cover-bottom-2.png)"};
   background-size: cover;
   background-repeat: no-repeat;
-  border: ${(props) => props.currentTopic === 0 ? "border: 0.4vw solid #fff" : "none"};
+  border: ${(props) => props.currentTopic === 0 ? "0.4vw solid #fff" : "none"};
 `;
 
 const ContentPoint = styled.div<{
@@ -104,7 +112,7 @@ const ContentPoint = styled.div<{
   height: 13.125vw;
   background-color: ${(props) =>
     props.currentTopic === 0 ? "none" : "rgb(229, 196, 0, 0.9)"};
-  border: ${(props) => props.currentTopic === 0 ? "border: 0.4vw solid #fff" : "none"};
+  border: ${(props) => props.currentTopic === 0 ? "0.4vw solid #fff" : "none"};
   border-radius: 13.33vw;
 `;
 

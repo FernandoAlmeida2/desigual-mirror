@@ -16,7 +16,7 @@ export default function NavBar({ currentTopic, changeTopic }: Props) {
       {
         <Styles.Container>
           <Styles.Logo
-            src="/images/desigualLab-vert-white.svg"
+            src="/images/logos/desigualLab-vert-white.svg"
             alt="logo desigual lab"
           />
           {currentTopic === 0 ? (
