@@ -69,7 +69,7 @@ export default function ContactUs() {
             name="name"
             className={styles.formControl}
             value={formData.name}
-            placeholder="Escreva seu nome"
+            placeholder="Seu nome"
             onChange={handleInput}
             required
           />
@@ -79,7 +79,7 @@ export default function ContactUs() {
             type="email"
             id="email"
             name="email"
-            placeholder="Escreva seu e-mail"
+            placeholder="Seu e-mail"
             value={formData.email}
             className={styles.formControl}
             onChange={handleInput}
@@ -90,7 +90,7 @@ export default function ContactUs() {
           <textarea
             name="message"
             className={styles.formControl}
-            placeholder="Sua mensagem..."
+            placeholder="Sua mensagem"
             value={formData.message}
             onChange={handleInput}
             required

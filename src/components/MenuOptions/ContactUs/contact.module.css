@@ -9,10 +9,9 @@
 }
 
 .container h1 {
-  color: #ff3b21;
   width: 26.7vw;
   font-size: 2.47vw;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 2.81vw;
 }
 
@@ -24,7 +23,8 @@
 }
 
 .formBtn {
-  border: 0.07vw solid #ced4da;
+  color: #646664;
+  border: none;
   background-color: #fff;
   border-radius: 0.34vw;
   font-size: 1.04vw;
@@ -32,19 +32,19 @@
   color: #000;
   width: 26.7vw;
   height: 2.74vw;
-  color: #ff3b21;
 }
 
 .formBtn:hover {
   cursor: pointer;
-  background-color: #0000ff;
-  color: #fff;
+    background-color: #aaa7a5;
+    color: #fff;
 }
 
 .formGroup input {
   width: 26.7vw;
   height: 2.74vw;
   border: 0.07vw solid #ced4da;
+  padding-left: 0.5vw;
 }
 
 .formGroup input::placeholder {
@@ -56,6 +56,8 @@
   width: 26.7vw;
   height: 4.8vw;
   border: 0.07vw solid #ced4da;
+  padding-left: 0.5vw;
+  padding-top: 0.5vw;
 }
 
 .formGroup textarea::placeholder {
@@ -64,13 +66,12 @@
 }
 
 .agreementBox {
-  color: #ff3b21;
   width: 26.7vw;
   display: flex;
   align-items: center;
   gap: 1.1vw;
   font-size: 1.1vw;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.23vw;
 }
 
