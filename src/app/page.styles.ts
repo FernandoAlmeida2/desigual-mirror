@@ -48,7 +48,7 @@ const MainContainer = styled.div<{
 `;
 
 const LogoPMF = styled.img`
-  position: fixed;
+  position: absolute;
   right: 2.73vw;
   top: 2.73vw;
   width: 9.37vw;
