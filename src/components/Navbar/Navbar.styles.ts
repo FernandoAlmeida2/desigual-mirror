@@ -1,53 +1,70 @@
+import { VscMenu } from "react-icons/vsc";
 import { styled } from "styled-components";
 
 const Container = styled.div`
-  width: 23.3vw;
   height: 86.7vw;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  gap: 4.2vw;
+  gap: 2.734375vw;
+  /* padding-left: 2.8125vw; */
 `;
 
 const Logo = styled.img`
-  height: 22.3vw;
-  padding: 1vw;
-  margin-top: 1vw;
-  background-color: rgba(255, 255, 255, 0.7);
+  width: 21.875vw;
+`;
+
+const MenuIcon = styled(VscMenu)`
+  color: #fff;
+  font-size: 2.1875vw;
+
+  &:hover {
+    cursor: pointer;
+    scale: 120%;
+  }
 `;
 
 const Navbar = styled.div`
   display: flex;
-  width: 21.3vw;
   height: 59.17vw;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 2vw;
-  color: #fff;
-  background-image: url(/images/desig-1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  animation: fadeIn 1s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
 `;
 
 const NavItem = styled.div`
-  width: 20vw;
+  width: 22.11vw;
   height: 4vw;
-  font-size: 2.2vw;
-  font-weight: 700;
-  /* background-color: #427ef7;
-    border-radius: 1vw; */
+  font-size: 1.1vw;
+  font-weight: 300;
+  padding-left: 1vw;
+  color: #000;
+  background-color: rgb(229, 196, 0, 0.7);
+  border-bottom: 0.2vw solid #d3b404;
   display: flex;
-  justify-content: center;
   align-items: center;
 
   &:hover {
     cursor: pointer;
+    background-color: #aaa7a5;
+    opacity: 0.5;
   }
 `;
+
+const NavTitle = styled.div`
+  width: 20vw;
+  font-size: 1.2vw;
+  color: #F2D201;
+  padding: 1.5vw 0 1vw 0;
+  font-weight: 300;
+`;
+
 export const Styles = {
   Container,
   Logo,
+  MenuIcon,
   Navbar,
   NavItem,
+  NavTitle,
 };
