@@ -33,22 +33,23 @@ const Navbar = styled.div`
   -webkit-animation-timing-function: ease-in-out;
 `;
 
-const NavItem = styled.div`
+const NavItem = styled.div<{
+  isSelected: boolean;
+}>`
   width: 22.11vw;
   height: 4vw;
   font-size: 1.1vw;
   font-weight: 300;
   padding-left: 1vw;
-  color: #000;
-  background-color: rgb(229, 196, 0, 0.7);
+  color: ${(props) => props.isSelected ? "rgb(229, 196, 0, 0.7)" : "#000"};
+  background-color: ${(props) => props.isSelected ? "#000" : "rgb(229, 196, 0, 0.7)"};
   border-bottom: 0.2vw solid #d3b404;
   display: flex;
   align-items: center;
 
   &:hover {
     cursor: pointer;
-    background-color: #aaa7a5;
-    opacity: 0.5;
+    background-color: rgb(229, 196, 0);
   }
 `;
 

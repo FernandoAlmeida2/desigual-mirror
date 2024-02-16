@@ -103,7 +103,7 @@ export default function ContactUs() {
           <input type="checkbox" required />
           Eu permito que o Escritório de Dados processe
           <br />
-          meus dados pessoais fornecidos acima
+          meus dados pessoais fornecidos acima.
         </label>
       </form>
       {submitted && <div>Mensagem enviada</div>}
