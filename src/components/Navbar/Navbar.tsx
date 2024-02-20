@@ -27,23 +27,41 @@ export default function NavBar({ currentTopic, changeTopic }: Props) {
                 isSelected={currentTopic === "Quem-somos"}
                 onClick={() => changeTopic("Quem-somos")}
               >
-                Quem somos
+                Desigual Lab
               </Styles.NavItem>
-              <Styles.NavItem isSelected={currentTopic === "O-que-fazemos"}>
-                O que fazemos
+              <Styles.NavItem isSelected={currentTopic === "Projetos"}>
+                Projetos
+              </Styles.NavItem>
+              <Styles.NavItem isSelected={currentTopic === "Avaliacoes"}>
+                Avaliações
+              </Styles.NavItem>
+              <Styles.NavItem isSelected={currentTopic === "Aceleracoes"}>
+                Acelerações
               </Styles.NavItem>
               <Styles.NavTitle>Como fazemos</Styles.NavTitle>
-              <Styles.NavItem isSelected={currentTopic === "O-que-alcancamos"}>
-                O que alcançamos
+              <Styles.NavItem isSelected={currentTopic === "Formacao"}>
+                Formação
+              </Styles.NavItem>
+              <Styles.NavItem isSelected={currentTopic === "Publicacoes"}>
+                Publicações
               </Styles.NavItem>
               <Styles.NavItem isSelected={currentTopic === "Parcerias"}>
                 Nossas parcerias
               </Styles.NavItem>
               <Styles.NavItem isSelected={currentTopic === "Resultados"}>
-                Resultados
+                Dados
               </Styles.NavItem>
               <Styles.NavItem isSelected={currentTopic === "Projecoes"}>
-                Projeções
+                Local
+              </Styles.NavItem>
+              <Styles.NavItem isSelected={currentTopic === "Equipe"}>
+                Equipe
+              </Styles.NavItem>
+              <Styles.NavItem isSelected={currentTopic === "Agenda"}>
+                Agenda
+              </Styles.NavItem>
+              <Styles.NavItem isSelected={currentTopic === "Projecoes"}>
+                Local
               </Styles.NavItem>
               <Styles.NavItem
                 isSelected={currentTopic === "Contato"}

@@ -41,15 +41,15 @@ const NavItem = styled.div<{
   font-size: 1.1vw;
   font-weight: 300;
   padding-left: 1vw;
-  color: ${(props) => props.isSelected ? "rgb(229, 196, 0, 0.7)" : "#000"};
-  background-color: ${(props) => props.isSelected ? "#000" : "rgb(229, 196, 0, 0.7)"};
+  color: ${(props) => props.isSelected ? "rgb(229, 196, 0, 1)" : "#000"};
+  background-color: ${(props) => props.isSelected ? "rgb(0, 0, 0, 0.7)" : "rgb(229, 196, 0, 0.7)"};
   border-bottom: 0.2vw solid #d3b404;
   display: flex;
   align-items: center;
 
   &:hover {
     cursor: pointer;
-    background-color: rgb(229, 196, 0);
+    background-color: ${(props) => props.isSelected ? "#000" : "rgb(229, 196, 0)"};
   }
 `;
 
