@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { firaSans } from "./ui/fonts";
+import Footer from "@/components/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "DesigualLab",
@@ -16,7 +17,8 @@ export default function RootLayout({
     <html lang="pt-BR">
 
       <body className={firaSans.className}>
-        {children}    
+        {children}
+        <Footer /> 
       </body>
 
     </html>

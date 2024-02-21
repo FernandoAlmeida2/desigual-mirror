@@ -44,7 +44,6 @@ export default function Home() {
           </Styles.ContainerBottom>
         </Styles.ContentContainer>
       </Styles.MainContainer>
-      <Footer />
     </>
   );
 }

@@ -4,6 +4,7 @@ import { useState } from "react";
 //import Link from "next/link";
 
 import { Styles } from "./Navbar.styles";
+import Link from "next/link";
 
 type Props = {
   currentTopic: string;
@@ -28,6 +29,13 @@ export default function NavBar({ currentTopic, changeTopic }: Props) {
                 onClick={() => changeTopic("Quem-somos")}
               >
                 Desigual Lab
+              </Styles.NavItem>
+              <Styles.NavItem
+                isSelected={currentTopic === "Mapa-desigualdade"}
+              >
+                <Link href="/mapa-desigualdade">
+                  Mapa da desigualdade (2023)
+                </Link>
               </Styles.NavItem>
               <Styles.NavItem isSelected={currentTopic === "Projetos"}>
                 Projetos
