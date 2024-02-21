@@ -1,13 +1,13 @@
 "use client";
 
-import MapContent from "@/components/MapContent/MapContent";
-import MapValues from "@/components/MapValues/MapValues";
-import TabPanel from "@/components/TabPanel/TabPanel";
-import { Styles } from "./page.styles";
+import MapContent from "./MapContent/MapContent";
+import MapValues from "./MapValues/MapValues";
+import TabPanel from "./TabPanel/TabPanel";
+import { Styles } from "./DesigualMap.styles";
 import { useState } from "react";
-import indicatorsList from "../lib/placeholder-data";
+import indicatorsList from "@/app/lib/placeholder-data";
 
-export default function Map() {
+export default function DesigualMap() {
   const [selectedSubject, setSelectedSubject] = useState(
     indicatorsList[0].subject
   );

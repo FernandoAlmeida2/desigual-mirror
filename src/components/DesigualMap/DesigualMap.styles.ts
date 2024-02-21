@@ -6,6 +6,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 2vw 2.22vw;
+  /* background-image: url(/images/cover-top-2.png); */
 `;
 
 export const Styles = {

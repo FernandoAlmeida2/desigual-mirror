@@ -32,10 +32,9 @@ export default function NavBar({ currentTopic, changeTopic }: Props) {
               </Styles.NavItem>
               <Styles.NavItem
                 isSelected={currentTopic === "Mapa-desigualdade"}
+                onClick={() => changeTopic("Mapa-desigualdade")}
               >
-                <Link href="/mapa-desigualdade">
-                  Mapa da desigualdade (2023)
-                </Link>
+                Mapa da desigualdade (2023)
               </Styles.NavItem>
               <Styles.NavItem isSelected={currentTopic === "Projetos"}>
                 Projetos
