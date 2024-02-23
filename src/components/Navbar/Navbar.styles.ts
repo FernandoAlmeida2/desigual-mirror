@@ -1,4 +1,5 @@
 import { VscMenu } from "react-icons/vsc";
+import { IoMdArrowDropdown, IoMdArrowDropright } from "react-icons/io";
 import { styled } from "styled-components";
 
 const Container = styled.div`
@@ -33,22 +34,63 @@ const Navbar = styled.div`
   -webkit-animation-timing-function: ease-in-out;
 `;
 
-const NavItem = styled.div`
+const NavItem = styled.div<{
+  isSelected: boolean;
+}>`
   width: 22.11vw;
   height: 4vw;
   font-size: 1.1vw;
   font-weight: 300;
   padding-left: 1vw;
-  color: #000;
-  background-color: rgb(229, 196, 0, 0.7);
+  color: ${(props) => props.isSelected ? "rgb(229, 196, 0, 1)" : "#000"};
+  background-color: ${(props) => props.isSelected ? "rgb(0, 0, 0, 0.7)" : "rgb(229, 196, 0, 0.7)"};
   border-bottom: 0.2vw solid #d3b404;
   display: flex;
   align-items: center;
 
   &:hover {
     cursor: pointer;
-    background-color: #aaa7a5;
-    opacity: 0.5;
+    background-color: ${(props) => props.isSelected ? "#000" : "rgb(229, 196, 0)"};
+  }
+`;
+
+
+const ArrowRightIcon = styled(IoMdArrowDropright)`
+  color: #000;
+  font-size: 1.1vw;
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+const ArrowDownIcon = styled(IoMdArrowDropdown)`
+  color: #000;
+  font-size: 2vw;
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+const NavSubItem = styled.div<{
+  isSelected: boolean;
+}>`
+  width: 21.51vw;
+  height: 3.5vw;
+  font-size: 1.1vw;
+  font-weight: 300;
+  padding-left: 2vw;
+  color: ${(props) => props.isSelected ? "rgb(229, 196, 0, 1)" : "#000"};
+  background-color: ${(props) => props.isSelected ? "rgb(0, 0, 0, 0.7)" : "rgb(229, 196, 0, 0.7)"};
+  border-bottom: 0.2vw solid #d3b404;
+  display: flex;
+  align-items: center;
+  margin-left: 0.6vw;
+
+  &:hover {
+    cursor: pointer;
+    background-color: ${(props) => props.isSelected ? "#000" : "rgb(229, 196, 0)"};
   }
 `;
 
@@ -66,5 +108,8 @@ export const Styles = {
   MenuIcon,
   Navbar,
   NavItem,
+  ArrowRightIcon,
+  ArrowDownIcon,
+  NavSubItem,
   NavTitle,
 };

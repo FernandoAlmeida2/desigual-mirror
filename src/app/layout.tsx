@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { roboto } from "./ui/fonts";
+import { firaSans } from "./ui/fonts";
 
 export const metadata: Metadata = {
   title: "DesigualLab",
@@ -15,8 +15,8 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
 
-      <body className={roboto.className}>
-        {children}    
+      <body className={firaSans.className}>
+        {children} 
       </body>
 
     </html>

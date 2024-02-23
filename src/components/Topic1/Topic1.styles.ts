@@ -27,7 +27,7 @@ const Container = styled.div`
 
   /* Handle on hover */
   &::-webkit-scrollbar-thumb:hover {
-    background: #a8a8a8;
+    background: rgb(229, 196, 0, 0.7);
   }
 
   &::-webkit-scrollbar-track-piece {
