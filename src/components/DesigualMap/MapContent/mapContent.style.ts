@@ -4,6 +4,7 @@ const Container = styled.div`
   width: 41.11vw;
   max-width: 41.11vw;
   height: 100vh;
+  z-index: 1;
 `;
 
 const NavBar = styled.div`

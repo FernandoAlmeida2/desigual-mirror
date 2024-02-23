@@ -12,6 +12,8 @@ type Props = {
 };
 
 export default function NavBar({ currentTopic, changeTopic }: Props) {
+  const [arrowClicked, setArrowClicked] = useState(false);
+
   return (
     <>
       {
@@ -30,15 +32,7 @@ export default function NavBar({ currentTopic, changeTopic }: Props) {
               >
                 Desigual Lab
               </Styles.NavItem>
-              <Styles.NavItem
-                isSelected={currentTopic === "Mapa-desigualdade"}
-                onClick={() => changeTopic("Mapa-desigualdade")}
-              >
-                Mapa da desigualdade (2023)
-              </Styles.NavItem>
-              <Styles.NavItem isSelected={currentTopic === "Projetos"}>
-                Projetos
-              </Styles.NavItem>
+
               <Styles.NavItem isSelected={currentTopic === "Avaliacoes"}>
                 Avaliações
               </Styles.NavItem>
@@ -46,6 +40,27 @@ export default function NavBar({ currentTopic, changeTopic }: Props) {
                 Acelerações
               </Styles.NavItem>
               <Styles.NavTitle>Como fazemos</Styles.NavTitle>
+              <Styles.NavItem
+                isSelected={false}
+                onClick={() =>
+                  arrowClicked ? setArrowClicked(false) : setArrowClicked(true)
+                }
+              >
+                {arrowClicked ? (
+                  <Styles.ArrowDownIcon />
+                ) : (
+                  <Styles.ArrowRightIcon />
+                )}
+                Projetos
+              </Styles.NavItem>
+              {arrowClicked && (
+                <Styles.NavSubItem
+                  isSelected={currentTopic === "Mapa-desigualdade"}
+                  onClick={() => changeTopic("Mapa-desigualdade")}
+                >
+                  Mapa da desigualdade (2023)
+                </Styles.NavSubItem>
+              )}
               <Styles.NavItem isSelected={currentTopic === "Formacao"}>
                 Formação
               </Styles.NavItem>

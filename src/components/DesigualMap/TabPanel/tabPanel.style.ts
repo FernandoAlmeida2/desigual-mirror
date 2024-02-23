@@ -8,6 +8,7 @@ const Container = styled.div`
   flex-direction: column;
   gap: 8vw;
   padding-top: 3vw;
+  z-index: 1;
 `;
 
 const SelectBox = styled.label`

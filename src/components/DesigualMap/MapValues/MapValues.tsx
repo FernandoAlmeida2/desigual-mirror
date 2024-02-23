@@ -29,7 +29,7 @@ export default function MapValues({
           width="100%"
           height="100%"
           style={{
-            background: "rgb(209, 209, 209, 0.3)",
+            background: "rgb(209, 209, 209, 0)",
             padding: "1vw",
             borderRadius: "1vw",
           }}
@@ -61,8 +61,7 @@ export default function MapValues({
         {mean.toLocaleString("pt-BR")}
       </Styles.MeanBox>
       <Styles.AsimmetryBox>
-        <span>DESIGUALTÔMETRO</span>
-        <br />
+        <span>Índice de Desigualdade</span>
         {asymmetry.toLocaleString("pt-BR")}
       </Styles.AsimmetryBox>
     </Styles.Container>

@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <>
       {currentTopic === "Mapa-desigualdade" ? (
-        <DesigualMap />
+        <DesigualMap changeTopic={changeTopic} />
       ) : (
         <Styles.MainContainer currentTopic={currentTopic}>
           <Styles.LogoPMF

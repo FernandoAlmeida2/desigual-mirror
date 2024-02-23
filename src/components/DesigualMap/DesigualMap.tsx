@@ -7,7 +7,11 @@ import { Styles } from "./DesigualMap.styles";
 import { useState } from "react";
 import indicatorsList from "@/app/lib/placeholder-data";
 
-export default function DesigualMap() {
+type Props = {
+  changeTopic: Function;
+};
+
+export default function DesigualMap({ changeTopic }: Props) {
   const [selectedSubject, setSelectedSubject] = useState(
     indicatorsList[0].subject
   );
@@ -41,6 +45,9 @@ export default function DesigualMap() {
 
   return (
     <Styles.Container>
+      <Styles.ReturnOption onClick={() => changeTopic("Quem-somos")}>
+        Retornar à página principal
+      </Styles.ReturnOption>
       <TabPanel
         currentIndicator={currentIndicator}
         selectedSubject={selectedSubject}

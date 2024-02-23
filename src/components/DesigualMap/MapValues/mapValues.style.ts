@@ -9,6 +9,7 @@ const Container = styled.div`
   align-items: center;
   gap: 2vw;
   padding-top: 3vw;
+  z-index: 1;
 `;
 
 const HistogramBox = styled.div`
@@ -18,6 +19,7 @@ const HistogramBox = styled.div`
 
 const MinMaxBox = styled.div`
   background-color: #f0f0f0;
+  opacity: 0.7;
   width: 19.44vw;
   height: 15.97vw;
   border-radius: 1vw;
@@ -41,6 +43,7 @@ const MeanBox = styled.div`
   height: 5.972vw;
   border-radius: 1vw;
   background-color: #f0f0f0;
+  opacity: 0.7;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,11 +60,15 @@ const AsimmetryBox = styled.div`
   height: 5.972vw;
   border-radius: 1vw;
   background-color: #FF5722;
+  opacity: 0.7;
   color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-size: 1%.5;
+  gap: 1vw;
+  padding: 1vw 0;
 
   span {
     font-weight: 700;

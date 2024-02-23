@@ -14,6 +14,8 @@ export default function ContentTop({ currentTopic }: Props) {
 
       case "Contato":
         return <ContactUs />;
+      case "Projetos":
+        return <div>Projetos</div>;
       default:
         return (
           <Styles.TitleText>

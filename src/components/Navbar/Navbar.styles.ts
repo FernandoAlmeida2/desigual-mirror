@@ -1,4 +1,5 @@
 import { VscMenu } from "react-icons/vsc";
+import { IoMdArrowDropdown, IoMdArrowDropright } from "react-icons/io";
 import { styled } from "styled-components";
 
 const Container = styled.div`
@@ -53,6 +54,46 @@ const NavItem = styled.div<{
   }
 `;
 
+
+const ArrowRightIcon = styled(IoMdArrowDropright)`
+  color: #000;
+  font-size: 1.1vw;
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+const ArrowDownIcon = styled(IoMdArrowDropdown)`
+  color: #000;
+  font-size: 2vw;
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+const NavSubItem = styled.div<{
+  isSelected: boolean;
+}>`
+  width: 21.51vw;
+  height: 3.5vw;
+  font-size: 1.1vw;
+  font-weight: 300;
+  padding-left: 2vw;
+  color: ${(props) => props.isSelected ? "rgb(229, 196, 0, 1)" : "#000"};
+  background-color: ${(props) => props.isSelected ? "rgb(0, 0, 0, 0.7)" : "rgb(229, 196, 0, 0.7)"};
+  border-bottom: 0.2vw solid #d3b404;
+  display: flex;
+  align-items: center;
+  margin-left: 0.6vw;
+
+  &:hover {
+    cursor: pointer;
+    background-color: ${(props) => props.isSelected ? "#000" : "rgb(229, 196, 0)"};
+  }
+`;
+
 const NavTitle = styled.div`
   width: 20vw;
   font-size: 1.2vw;
@@ -67,5 +108,8 @@ export const Styles = {
   MenuIcon,
   Navbar,
   NavItem,
+  ArrowRightIcon,
+  ArrowDownIcon,
+  NavSubItem,
   NavTitle,
 };

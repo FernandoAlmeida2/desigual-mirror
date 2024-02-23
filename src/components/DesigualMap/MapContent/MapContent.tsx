@@ -33,15 +33,15 @@ export default function MapContent({ mapPath, tablePath }: Props) {
           src={mapPath}
           width="100%"
           height="100%"
-          style={{ background: "rgb(209, 209, 209, 0.3)", padding: "1vw" }}
+          style={{ background: "rgb(209, 209, 209, 0)", padding: "1vw", border: "0.1vw solid #d5d5d5"}}
         ></iframe>
       ) : (
         <iframe
-          id="iframe-mapa"
+          id="iframe-table"
           src={tablePath}
           width="100%"
           height="100%"
-          style={{ background: "rgb(209, 209, 209, 0.3)", padding: "1vw" }}
+          style={{ background: "rgb(209, 209, 209, 0)", padding: "1vw", border: "0.1vw solid #d5d5d5"}}
         ></iframe>
       )}
     </Styles.Container>
